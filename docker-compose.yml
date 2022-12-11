@@ -1,0 +1,14 @@
+version: '3'
+services:
+  dx-tools:
+    build: .
+    volumes:
+      - './:/home'
+    restart: always
+    tty: true
+    working_dir: /home
+    ports:
+      - 5555:8888
+    command: bash -c "jupyter notebook --port=8888 --ip=0.0.0.0 --allow-root --NotebookApp.token=''"
+    # jupyter notebook --port=8888 --ip=0.0.0.0 --allow-root --NotebookApp.token=''
+

@@ -10,5 +10,4 @@ RUN apt-get install -y python3-pip
 
 # install pip package
 RUN pip3 install --upgrade pip
-RUN pip3 install notebook pandas
-RUN pip3 install tabula-py
+RUN pip3 install notebook pandas loguru tabula-py
